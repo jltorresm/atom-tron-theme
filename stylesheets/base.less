@@ -112,3 +112,19 @@
     }
   }
 }
+
+//JSON
+.json {
+  .leading-whitespace+.string, .hard-tab+.string {
+      color: @comment;
+      .punctuation {
+        color: @comment;
+      }
+  }
+  .key-value, .pair{ color: @green; }
+  .expected-dictionary-separator{ color: spin(darken(@string,20%),10) }
+  .constant { color: @entities; }
+}
+
+// ui-variables
+@font-size: 12px;
