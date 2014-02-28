@@ -1,3 +1,4 @@
-# test-theme theme
+atom-tron-theme
+=================================
 
-A short description of your theme.
+Not quite finished yet!
