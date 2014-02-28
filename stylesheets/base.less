@@ -21,6 +21,7 @@
   }
 
   .gutter .line-number {
+    color: @line-number-color;
     opacity: 1;
   }
 
@@ -36,7 +37,6 @@
 
   .selection .region {
     background-color: @selection;
-    color: @base03;
   }
 
   .line-number.cursor-line-no-selection {
@@ -45,17 +45,17 @@
 }
 
 .bracket-matcher {
-  background-color: @base1;
-  opacity: 0.7;
+  background-color: @bracket-matcher;
+  opacity: 0.3;
 }
 
 .comment {
-  color: @base01;
+  color: @comment;
   font-style: italic;
 }
 
 .entity {
-  color: @yellow;
+  color: @entities;
 }
 
 .keyword {
@@ -67,7 +67,7 @@
 }
 
 .constant {
-  color: @yellow;
+  color: @constants;
 
   &.numeric,
   &.boolean {
@@ -76,7 +76,7 @@
 }
 
 .variable {
-  color: @blue;
+  color: @variable;
 }
 
 .delimiter, .brace {
