@@ -128,8 +128,41 @@
 
 //PHP
 .php {
-
+  .keyword {
+    color: @php-keyword;
+    &.operator {
+      color: @php-operator;
+    }
+  }
+  .entity:not(.inherited-class) {
+    color: @php-entity
+  }
+  .type {
+    color: @php-class-functions;
+  }
+  .punctuation:not(.variable), .modifier {
+    color: @php-punctuation-modifier;
+  }
+  .punctuation.string{
+    color: @string;
+  }
+  .comment, .comment.punctuation {
+    color: @php-comment;
+  }
+  .phpdoc.keyword {
+    color: saturate(lighten(@php-comment, 10%), 10%);
+    font-style: normal;
+  }
+  .name.function{
+    color: @php-function;
+  }
+  .function-call {
+    color: @php-function-call;
+  }
+  .constant {
+    color: @php-constant;
+  }
+  .property {
+    color: @php-property;
+  }
 }
-
-// ui-variables
-@font-size: 12px;

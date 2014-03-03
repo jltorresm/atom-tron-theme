@@ -22,3 +22,14 @@
 @variable: #BDD0DE;
 @brace: darken(@variable, 30);
 @string: red;
+
+@php-operator: #90A5C7;
+@php-function: @entities;
+@php-entity: @variable;
+@php-class-functions: @main-rule;
+@php-punctuation-modifier: lighten(desaturate(@php-class-functions, 30%), 30%);
+@php-comment: desaturate(darken(@comment, 30%), 10%);
+@php-keyword: saturate(@php-operator, 20%);
+@php-function-call: spin(darken(@php-operator, 10%), 2);
+@php-property: @php-function-call;
+@php-constant: @entities;
