@@ -11,8 +11,15 @@
 }
 
 .editor {
-  .invisible-character,
+
   .indent-guide {
+    border-left: dotted 1px;
+    box-shadow: none;
+    color: @indent-guide;
+    opacity: 0.5;
+  }
+
+  .invisible-character {
     color: @base01;
   }
 
@@ -111,6 +118,12 @@
       color: @red;
     }
   }
+}
+
+.wrap-guide {
+  background-color: transparent;
+  border-left: dotted 1px @indent-guide;
+  opacity: 0.5;
 }
 
 //JSON
