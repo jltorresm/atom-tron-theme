@@ -135,7 +135,7 @@ atom-text-editor {
 }
 
 //JSON
-atom-text-editor[data-grammar="json"] {
+.source.json {
   .leading-whitespace+.string, .hard-tab+.string {
       color: @comment;
       .punctuation {
@@ -148,7 +148,7 @@ atom-text-editor[data-grammar="json"] {
 }
 
 //PHP
-atom-text-editor[data-grammar="php"] {
+.source.php {
   .keyword {
     color: @php-keyword;
     &.operator {
