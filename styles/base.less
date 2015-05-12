@@ -10,14 +10,15 @@ atom-text-editor {
   color: @main-rule;
 }
 
-.leading-whitespace {
-  border-left: dotted 1px;
-  box-shadow: none;
+.invisible-character { color: transparent; }
+
+.indent-guide {
+  box-shadow: dotted 1px;
   color: @indent-guide;
   opacity: 0.3;
 }
 
-.invisible-character {
+.selection .invisible-character {
   color: @base01;
 }
 
