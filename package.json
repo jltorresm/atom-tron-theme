@@ -1,7 +1,7 @@
 {
   "name": "tron-theme",
   "theme": "syntax",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Adaption of Tron Legacy theme for Atom",
   "repository": "https://github.com/jltorresm/atom-tron-theme",
