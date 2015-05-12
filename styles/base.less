@@ -10,44 +10,52 @@ atom-text-editor {
   color: @main-rule;
 }
 
-.atom-text-editor {
+.leading-whitespace {
+  border-left: dotted 1px;
+  box-shadow: none;
+  color: @indent-guide;
+  opacity: 0.3;
+}
 
-  .indent-guide {
-    border-left: dotted 1px;
-    box-shadow: none;
-    color: @indent-guide;
-    opacity: 0.5;
+.invisible-character {
+  color: @base01;
+}
+
+.gutter {
+  background-color: @gutter-bg;
+}
+
+.gutter .line-number {
+  color: @line-number-color;
+  opacity: 1;
+}
+
+.gutter .line-number.folded,
+.gutter .line-number:after,
+.fold-marker:after {
+  color: @folded-line;
+}
+
+.cursor {
+  border-color: @cursor;
+}
+
+.selection .region {
+  background-color: @selection;
+}
+
+.line-number.cursor-line-no-selection {
+  background-color: lighten(@gutter-bg, 5%);
+}
+
+.tab-bar .tab.active {
+  &::before {
+    background: @line-number-color;
   }
 
-  .invisible-character {
-    color: @base01;
-  }
-
-  .gutter {
-    background-color: @gutter-bg;
-  }
-
-  .gutter .line-number {
-    color: @line-number-color;
-    opacity: 1;
-  }
-
-  .gutter .line-number.folded,
-  .gutter .line-number:after,
-  .fold-marker:after {
-    color: @folded-line;
-  }
-
-  .cursor {
-    border-color: @cursor;
-  }
-
-  .selection .region {
-    background-color: @selection;
-  }
-
-  .line-number.cursor-line-no-selection {
-    background-color: lighten(@gutter-bg, 5%);
+  &[data-type="TextEditor"]::after {
+    background: @bg-color;
+    border-color: @selection;
   }
 }
 
@@ -61,7 +69,7 @@ atom-text-editor {
   font-style: italic;
 }
 
-.entity {
+.entity{
   color: @entities;
 }
 
@@ -127,7 +135,7 @@ atom-text-editor {
 }
 
 //JSON
-.json {
+atom-text-editor[data-grammar="json"] {
   .leading-whitespace+.string, .hard-tab+.string {
       color: @comment;
       .punctuation {
@@ -140,7 +148,7 @@ atom-text-editor {
 }
 
 //PHP
-.php {
+atom-text-editor[data-grammar="php"] {
   .keyword {
     color: @php-keyword;
     &.operator {
