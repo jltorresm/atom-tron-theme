@@ -49,7 +49,7 @@ atom-text-editor {
   background-color: lighten(@gutter-bg, 5%);
 }
 
-.tab-bar .tab.active {
+.tab-bar .syntax--tab.active::before {
   &::before {
     background: @line-number-color;
   }
@@ -65,65 +65,65 @@ atom-text-editor {
   opacity: 0.3;
 }
 
-.comment {
+.syntax--comment {
   color: @comment;
   font-style: italic;
 }
 
-.entity{
+.syntax--entity{
   color: @entities;
 }
 
-.keyword {
+.syntax--keyword {
   color: @green;
 }
 
-.storage.type {
+.syntax--storage.syntax--type {
   color: @green;
 }
 
-.constant {
+.syntax--constant {
   color: @constants;
 
-  &.numeric,
-  &.boolean {
+  &.syntax--numeric,
+  &.syntax--boolean {
     color: @number;
   }
 }
 
-.variable {
+.syntax--variable {
   color: @variable;
 }
 
-.delimiter, .brace {
+.syntax--delimiter, .syntax--brace {
   color: @brace;
 }
 
-.delimiter.period {
+.syntax--delimiter.syntax--period {
   color: @green;
 }
 
-.invalid.deprecated {
+.syntax--invalid.syntax--deprecated {
   text-decoration: underline;
   color: @red;
 }
 
-.invalid.illegal {
+.syntax--invalid.syntax--illegal {
   color: @red;
 }
 
-.string {
+.syntax--string {
   color: @string;
 
-  .constant.character.escape {
+  .syntax--constant.syntax--character.syntax--escape {
     color: @red;
   }
 
-  &.regexp {
+  &.syntax--regexp {
     color: @cyan;
 
-    .source.ruby.embedded,
-    .string.regexp.arbitrary-repitition {
+    .syntax--source.syntax--ruby.syntax--embedded,
+    .syntax--string.syntax--regexp.syntax--arbitrary-repitition {
       color: @red;
     }
   }
@@ -136,58 +136,58 @@ atom-text-editor {
 }
 
 //JSON
-.source.json {
-  .leading-whitespace+.string, .hard-tab+.string {
+.syntax--source.syntax--json {
+  .syntax--leading-whitespace+.syntax--string, .syntax--hard-tab+.syntax--string {
       color: @comment;
-      .punctuation {
+      .syntax--punctuation {
         color: @comment;
       }
   }
-  .key-value, .pair{ color: @green; }
-  .expected-dictionary-separator{ color: spin(darken(@string,20%),10) }
-  .constant { color: @entities; }
+  .syntax--key-value, .syntax--pair{ color: @green; }
+  .syntax--expected-dictionary-separator{ color: spin(darken(@string,20%),10) }
+  .syntax--constant { color: @entities; }
 }
 
 //PHP
-.source.php {
-  .keyword {
+.syntax--source.syntax--php {
+  .syntax--keyword {
     color: @php-keyword;
-    &.operator {
+    &.syntax--operator {
       color: @php-operator;
     }
   }
-  .entity:not(.inherited-class) {
+  .syntax--entity:not(.inherited-class) {
     color: @php-entity
   }
-  .type {
+  .syntax--type {
     color: @php-class-functions;
   }
-  .punctuation:not(.variable), .modifier {
+  .syntax--punctuation:not(.variable), .syntax--modifier {
     color: @php-punctuation-modifier;
   }
-  .punctuation.string{
+  .syntax--punctuation.syntax--string{
     color: @string;
   }
-  .comment, .comment.punctuation {
+  .syntax--comment, .syntax--comment.syntax--punctuation {
     color: @php-comment;
   }
-  .phpdoc.keyword {
+  .syntax--phpdoc.syntax--keyword {
     color: saturate(lighten(@php-comment, 10%), 10%);
     font-style: normal;
   }
-  .name.function{
+  .syntax--name.syntax--function{
     color: @php-function;
   }
-  .function-call {
+  .syntax--function-call {
     color: @php-function-call;
   }
-  .constant {
+  .syntax--constant {
     color: @php-constant;
   }
-  .property {
+  .syntax--property {
     color: @php-property;
   }
-  .numeric {
+  .syntax--numeric {
     color: @php-numeric;
   }
 }
